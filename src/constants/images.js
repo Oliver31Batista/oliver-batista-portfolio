@@ -18,15 +18,15 @@ import sass from '../assets/sass.png';
 import typescript from '../assets/typescript.png';
 import vue from '../assets/vue.png';
 
-import about01 from '../assets/about01.png';
-import about02 from '../assets/about02.png';
-import about03 from '../assets/about03.png';
-import about04 from '../assets/about04.png';
+import about01 from '../assets/about_development.svg';
+import about02 from '../assets/web_design.svg';
+import about03 from '../assets/web_responsive.svg';
+import about04 from '../assets/web_animation.svg';
 
-import profile from '../assets/profile.jpg';
+import avatarOliver from '../assets/avatarOliver.svg'
+import profile3 from '../assets/profile3.png';
 import circle from '../assets/circle.svg';
 import logo from '../assets/logo.png';
-import Oliver from '../assets/Oliver.svg'
 
 import adidas from '../assets/adidas.png';
 import amazon from '../assets/amazon.png';
@@ -35,6 +35,7 @@ import bolt from '../assets/bolt.png';
 import nb from '../assets/nb.png';
 import skype from '../assets/skype.png';
 import spotify from '../assets/spotify.png';
+
 
 export default {
   email,
@@ -60,10 +61,10 @@ export default {
   about02,
   about03,
   about04,
-  profile,
+  avatarOliver,
+  profile3,
   circle,
   logo,
-  Oliver,
   adidas,
   amazon,
   asus,

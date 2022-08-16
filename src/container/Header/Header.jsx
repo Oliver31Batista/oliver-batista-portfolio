@@ -8,12 +8,12 @@ const scaleVariants = {
   whileInView: {
     scale: [0, 1],
     opacity: [0, 1],
-    transition:{
+    transition: {
       duration: 1,
-      ease: 'easeInOut'
-    }
-  }
-}
+      ease: 'easeInOut',
+    },
+  },
+};
 
 const Header = () => {
   return (
@@ -30,13 +30,13 @@ const Header = () => {
               <p className="p-text">Hello, I am</p>
               <h1 className="head-text">Oliver</h1>
             </div>
-            </div>
-
-            <div className="tag-cmp app__flex">
-              <div className="p-text">Web Developer</div>
-              <div className="p-text">UI/UX Designer</div>
-            </div>
           </div>
+
+          <div className="tag-cmp app__flex">
+            <div className="p-text">Web Developer</div>
+            <div className="p-text">UI/UX Designer</div>
+          </div>
+        </div>
       </motion.div>
 
       <motion.div
@@ -44,7 +44,7 @@ const Header = () => {
         transition={{ duration: 1, delayChildren: 0.5 }}
         className="app__header-img"
       >
-        <img src={images.profile} alt="profile_bg" />
+        <img src={images.avatarOliver} alt="profile_bg" />
 
         <motion.img
           whileInView={{ scale: [0, 1] }}
@@ -53,18 +53,18 @@ const Header = () => {
           alt="profile_circle"
           className="overlay_circle"
         />
-        
       </motion.div>
 
-      <motion.div variants={scaleVariants}
-      whileInView={scaleVariants.whileInView}
-      className="app__header-circles">
+      <motion.div
+        variants={scaleVariants}
+        whileInView={scaleVariants.whileInView}
+        className="app__header-circles"
+      >
         {[images.react, images.sass, images.figma].map((circle, index) => (
           <div className="circle-cmp app__flex" key={`circle-${index}`}>
             <img src={circle} alt="profile_bg" />
           </div>
         ))}
-
       </motion.div>
     </div>
   );
