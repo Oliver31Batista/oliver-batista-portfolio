@@ -28,6 +28,8 @@ import circle from '../assets/circle.svg';
 import bolt from '../assets/bolt.png';
 import nb from '../assets/nb.png';
 
+import experience_road from '../assets/experience_road.svg'
+
 
 
 export default {
@@ -57,4 +59,5 @@ export default {
   circle,
   bolt,
   nb,
+  experience_road,
 };

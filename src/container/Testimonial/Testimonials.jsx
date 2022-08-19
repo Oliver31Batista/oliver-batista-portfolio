@@ -6,7 +6,7 @@ import { AppWrapp, MotionWrap } from '../../wrapper';
 import { urlFor, client } from '../../client';
 import './Testimonial.scss';
 
-const Testimonial = () => {
+const Testimonials = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [testimonials, setTestimonials] = useState([]);
   const [brands, setBrands] = useState([]);
@@ -92,7 +92,7 @@ const Testimonial = () => {
 };
 
 export default AppWrapp(
-  MotionWrap(Testimonial, 'app__testimonial'),
-  'testimonial',
-  'app__primarybg'
+  MotionWrap(Testimonials, 'app__testimonial'),
+  'testimonials',
+  'app__whitebg'
 );

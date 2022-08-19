@@ -11,6 +11,7 @@ const Footer = () => {
     email: '',
     message: '',
   });
+
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
 
@@ -48,7 +49,7 @@ const Footer = () => {
         <div className="app__footer-card ">
           <img src={images.email} alt="email" />
           <a href="mailto:ohenriquez@intellisys.com.do" className="p-text">
-          ohenriquez@intellisys.com.do
+            ohenriquez@intellisys.com.do
           </a>
         </div>
         <div className="app__footer-card">
@@ -62,21 +63,27 @@ const Footer = () => {
         <div className="app__footer-form app__flex">
           <div className="app__flex">
             <input
-              className="p-text"
               type="text"
+              className="p-text"
               placeholder="Your Name"
               name="username"
               value={username}
+              size="64"
+              maxLength="64"
               onChange={handleChangeInput}
             />
           </div>
           <div className="app__flex">
             <input
-              className="p-text"
+              pattern='^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$'
+              required
               type="email"
+              className="p-text"
               placeholder="Your Email"
               name="email"
               value={email}
+              size="64"
+              maxLength="64"
               onChange={handleChangeInput}
             />
           </div>
@@ -98,6 +105,10 @@ const Footer = () => {
           <h3 className="head-text">Thank you for getting in touch! 👊</h3>
         </div>
       )}
+      <div className="copyright">
+        <p className="p-text">@2022 OLIVER BATISTA</p>
+        <p className="p-text">All rights reserved</p>
+      </div>
     </>
   );
 };
@@ -105,5 +116,5 @@ const Footer = () => {
 export default AppWrapp(
   MotionWrap(Footer, 'app__footer'),
   'contact',
-  'app__whitebg'
+  'app__primarybg'
 );
